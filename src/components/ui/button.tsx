@@ -15,6 +15,13 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        // Telco Hub Custom Variants
+        buy: "bg-brand-orange text-white hover:bg-brand-orange-dark shadow-orange transition-all duration-300 font-semibold",
+        "buy-lg": "bg-brand-orange text-white hover:bg-brand-orange-dark shadow-orange transition-all duration-300 font-semibold h-12 px-8 text-base",
+        card: "bg-card text-card-foreground hover:bg-card/80 border border-border",
+        success: "bg-success text-success-foreground hover:bg-success/90",
+        warning: "bg-warning text-warning-foreground hover:bg-warning/90",
+        "ghost-orange": "text-brand-orange hover:bg-brand-orange/10 hover:text-brand-orange-dark",
       },
       size: {
         default: "h-10 px-4 py-2",
