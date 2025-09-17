@@ -24,6 +24,7 @@ import {
   Shield
 } from "lucide-react";
 import { User as SupabaseUser, Session } from "@supabase/supabase-js";
+import { useNavigate } from "react-router-dom";
 
 interface MainLayoutProps {
   user: SupabaseUser;
@@ -40,6 +41,7 @@ export default function MainLayout({ user, session, onSignOut }: MainLayoutProps
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const { toast } = useToast();
+  const navigate = useNavigate();
 
   const isAdmin = user.email === "thewayofthedragg@gmail.com" || userProfile?.role === 'admin';
 
@@ -106,7 +108,7 @@ export default function MainLayout({ user, session, onSignOut }: MainLayoutProps
       icon: ShoppingBag,
       title: "Browse Products",
       description: "View our catalog of digital goods.",
-      onClick: () => toast({ title: "Feature coming soon!" })
+      onClick: () => navigate("/products")
     },
     {
       icon: CreditCard,
